@@ -1,7 +1,3 @@
-import mysql.connector
-conn = mysql.connector.connect(
-  host="localhost",
-  user="root",
-  password="",
-database="level7"
-)
+from mysql.connector import MySQLConnection
+
+conn=MySQLConnection(host='127.0.0.1',password="",user='root', database='level7')

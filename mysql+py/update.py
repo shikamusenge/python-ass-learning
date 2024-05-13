@@ -2,10 +2,10 @@ from conn_mysql import conn
 cuso = conn.cursor()
 name=input("Enter Name")
 address = input("Address")
-sql = "INSERT INTO customers (name, address) VALUES (%s, %s)"
-val = (name, address)
+sql = "UPDATE customers SET name=%s, address=%s where customer_id=%s"
+val = (name, address, 3)
 cuso.execute(sql, val)
-# conn.commit()
+conn.commit()
 print(f"data inserted{cuso.rowcount}")
 
 conn.close()

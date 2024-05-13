@@ -11,7 +11,7 @@ def retrieve_data():
             database="level7"
         )
         mycursor = mydb.cursor()
-        mycursor.execute("SELECT * FROM customers")
+        mycursor.execute("SELECT name, product_name product,quantity FROM `transctions` INNER JOIN customers WHERE customers.customer_id = transctions.customer_id")
         result = mycursor.fetchall()
         print("Retrieved data from the 'customers' table:")
         for row in result:

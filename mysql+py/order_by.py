@@ -11,7 +11,7 @@ def retrieve_data():
             database="level7"
         )
         mycursor = mydb.cursor()
-        mycursor.execute("SELECT * FROM customers")
+        mycursor.execute("SELECT * FROM customers order by name asc")
         result = mycursor.fetchall()
         print("Retrieved data from the 'customers' table:")
         for row in result:
