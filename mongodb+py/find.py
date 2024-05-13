@@ -1,5 +1,6 @@
 from conn_mongo import customersCollection
 
-custormars = customersCollection.find()
+data = customersCollection.find()
 
-print(custormars)
+for item in data:
+    print(item)
